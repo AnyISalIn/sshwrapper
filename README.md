@@ -1,6 +1,10 @@
-# SSHWrapper - Serving Linux Command to SSH
+# SSHWrapper - Serving Linux Command via SSH
+
+## Demonstrate
 
 [![asciicast](https://asciinema.org/a/496099.svg)](https://asciinema.org/a/496099)
+
+## Workflow
 
 ![](./diagram.png)
 
