@@ -1,0 +1,28 @@
+routes:
+  - uri: "/bastion"
+    allow:
+      - foo
+    handler:
+      command:
+        cmd: "examples/bastion.sh"
+  - uri: "/kube-watchtower"
+    allow:
+      - foo
+    handler:
+      command:
+        cmd: "k9s"
+  - uri: "/run-container"
+    allowAllUsers: true
+    handler:
+      command:
+        cmd: "/bin/bash"
+        args:
+          - -c
+          - docker run --name container-$SSHWRAPPER_USERNAME --hostname=$SSHWRAPPER_USERNAME -ti --rm ubuntu:20.04 /bin/bash
+users:
+  - name: foo
+    password: foo
+  - name: bar
+    password: bar
+
+# hostKeyFile: "examples/test"
