@@ -53,8 +53,8 @@ routes:
 ```
 
 ```shell
-SERVER_ADDR="<your_wrapper_server>:2022"
-ssh anyisalin@$SERVER_ADDR "/run-container"
+SERVER_ADDR="<your_wrapper_server>"
+ssh anyisalin@$SERVER_ADDR -tp 2022 "/run-container"
 ```
 
 ### Kubernetes Watchtower
@@ -83,6 +83,6 @@ routes:
 ```
 
 ```shell
-SERVER_ADDR="<your_wrapper_server>:2022"
-ssh anyisalin@$SERVER_ADDR "/k8s-watchtower"
+SERVER_ADDR="<your_wrapper_server>"
+ssh anyisalin@$SERVER_ADDR -tp 2022 "/k8s-watchtower"
 ```
